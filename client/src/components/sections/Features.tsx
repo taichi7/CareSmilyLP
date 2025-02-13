@@ -8,6 +8,7 @@ interface FeatureProps {
   additionalInfo?: string[];
 }
 
+
 const Feature: React.FC<FeatureProps> = ({ number, title, description, imageSrc, additionalInfo }) => (
     <div className="flex relative flex-col items-center px-20 pt-28 pb-2.5 w-full min-h-[2064px] max-md:px-5 max-md:pt-24 max-md:max-w-full">
       <img
@@ -26,7 +27,7 @@ const Feature: React.FC<FeatureProps> = ({ number, title, description, imageSrc,
                     <div className="w-[287px] h-[95px] px-[60px] py-[22px] left-0 top-0 absolute bg-orange-500 rounded-[20px] justify-center items-center gap-2.5 inline-flex">
                         <div className="text-center text-white text-[40px] font-bold font-['Noto Sans'] leading-[56px]">その1</div>
                     </div>
-                    <div className="left-[197px] top-[255px] absolute">
+                    <div data-svg-wrapper className="left-[197px] top-[255px] absolute">
                     </div>
                     <div className="w-[674px] h-14 left-[306px] top-[20px] absolute text-center text-zinc-800 text-[45px] font-bold font-['Noto Sans'] leading-[63px]">事業所専用の管理画面</div>
                     <div className="w-[503px] h-[155px] left-[529px] top-[149px] absolute text-justify text-zinc-800 text-[32px] font-normal font-['Noto Sans JP'] leading-[48px]">パソコンやスマートフォンからアクセス可能。事業所ごとのマイページからアプリにアクセス。</div>
@@ -43,10 +44,10 @@ const Feature: React.FC<FeatureProps> = ({ number, title, description, imageSrc,
                       <div className="w-[287px] h-[95px] px-[60px] py-[22px] left-0 top-0 absolute bg-orange-500 rounded-[20px] justify-center items-center gap-2.5 inline-flex">
                           <div className="text-center text-white text-[40px] font-bold font-['Noto Sans'] leading-[56px]">その２</div>
                       </div>
-                      <div className="left-[197px] top-[255px] absolute">
+                      <div data-svg-wrapper className="left-[197px] top-[255px] absolute">
                       <svg width="73" height="79" viewBox="0 0 73 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.125 10.1089L30.6296 65.2614L38.2642 41.2439L60.7421 33.0864L9.125 10.1089Z" fill="black" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M39.5417 42.6089L57.7917 62.1089" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9.125 10.1089L30.6296 65.2614L38.2642 41.2439L60.7421 33.0864L9.125 10.1089Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M39.5417 42.6089L57.7917 62.1089" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                       </div>
                       <div className="w-[674px] h-14 left-[306px] top-[20px] absolute text-center text-zinc-800 text-[45px] font-bold font-['Noto Sans'] leading-[63px]">「書類を選択して」からスタート</div>
@@ -69,11 +70,11 @@ const Feature: React.FC<FeatureProps> = ({ number, title, description, imageSrc,
                       </div>
                       <div className="w-[486px] h-14 left-[341px] top-[20px] absolute text-center text-zinc-800 text-[45px] font-bold font-['Noto Sans'] leading-[63px]">文例のコピー&ペースト</div>
                       <div className="w-[503px] h-[155px] left-[529px] top-[149px] absolute text-justify text-zinc-800 text-[32px] font-normal font-['Noto Sans JP'] leading-[48px]">アプリの文例からコピーを行い、<br/>各施設に導入してるシステムに<br/>直接貼り付けが可能。</div>
-                      <img className=" top-[146px] absolute border border-black" src="src/img/list.png" alt="List example" />
+                      <img className=" top-[146px] absolute border border-black" src="src/img/list.png" />
                       <div className="w-[51px] h-[54px] left-[430px] top-[334px] absolute bg-zinc-300/0 border-4 border-orange-500"></div>
-                      <div className="left-[568px] top-[361px] absolute">
+                      <div data-svg-wrapper className="left-[568px] top-[361px] absolute">
                       </div>
-                      <svg width="85" height="23" viewBox="0 0 85 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="85" height="23" viewBox="0 0 85 23" fill="none" xmlns="http://www.w3.org/2000/svg" z-index="9999">
                       <path d="M0.939339 10.6571C0.353554 11.2429 0.353554 12.1926 0.939339 12.7784L10.4853 22.3244C11.0711 22.9102 12.0208 22.9102 12.6066 22.3244C13.1924 21.7386 13.1924 20.7888 12.6066 20.2031L4.12132 11.7178L12.6066 3.23249C13.1924 2.64671 13.1924 1.69696 12.6066 1.11117C12.0208 0.525385 11.0711 0.525385 10.4853 1.11117L0.939339 10.6571ZM85 10.2178L2 10.2178V13.2178L85 13.2178V10.2178Z" fill="#F15F2C"/>
                       </svg>
                       <div className="w-[415px] h-[33px] left-[577px] top-[345px] absolute text-justify text-orange-500 text-[32px] font-medium font-['Noto Sans JP'] leading-[30px]">ここをクリックするだけで...</div>
@@ -82,6 +83,7 @@ const Feature: React.FC<FeatureProps> = ({ number, title, description, imageSrc,
           </div>
           <div className="left-[279px] top-0 absolute text-center"><span className="text-zinc-800 text-5xl font-bold font-['Noto Sans'] leading-[67.20px]">CareSmily</span><span className="text-zinc-800 text-[40px] font-bold font-['Noto Sans'] leading-[56px]"> </span><span className="text-zinc-800 text-[32px] font-bold font-['Noto Sans'] leading-[44.80px]">の</span><span className="text-stone-500 text-[28px] font-bold font-['Noto Sans'] leading-[39.20px]"> </span><span className="text-sky-500 text-5xl font-bold font-['Noto Sans'] leading-[67.20px]">特徴・機能</span></div>
       </div>
+
     </div>
   );
 
