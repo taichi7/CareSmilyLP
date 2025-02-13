@@ -21,7 +21,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    host: true
+    host: true,
     allowedHosts: ['Care-smily-hp4-cij2jrclu-nico-webapplications-projects.vercel.app']
   }
 });
