@@ -22,5 +22,6 @@ export default defineConfig({
   },
   server: {
     host: true
+    allowedHosts: ['Care-smily-hp4-cij2jrclu-nico-webapplications-projects.vercel.app']
   }
 });
