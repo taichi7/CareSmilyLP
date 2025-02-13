@@ -7,7 +7,6 @@
     }
   ],
   "routes": [
-    // シングルページアプリでクライアントサイドルーティングを使う場合のリライト
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "outputDirectory": "build/public"
