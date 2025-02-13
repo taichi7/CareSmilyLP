@@ -3,11 +3,12 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": {}
+      "config": {
+        "distDir": "build/public"
+      }
     }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "outputDirectory": "build/public"
+  ]
 }
