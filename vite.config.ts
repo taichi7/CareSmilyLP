@@ -20,8 +20,5 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "build/public"),
     emptyOutDir: true,
   },
-  server: {
-    host: true,
-    allowedHosts: ['Care-smily-hp4-cij2jrclu-nico-webapplications-projects.vercel.app']
-  }
+  base: './'
 });
