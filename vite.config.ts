@@ -20,4 +20,7 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "build/public"),
     emptyOutDir: true,
   },
+  server: {
+    host: true
+  }
 });
