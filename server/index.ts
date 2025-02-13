@@ -1,21 +1,25 @@
-import express from "express";
-import { setupVite, serveStatic, log } from "./vite";
+import { createServer } from "vite";
 
-const app = express();
+// Simple logger function that doesn't depend on Express
+const log = (message: string) => {
+  const time = new Date().toLocaleTimeString();
+  console.log(`${time} [vite] ${message}`);
+};
 
 (async () => {
-  // Set up static file serving
-  if (app.get("env") === "development") {
-    // In development, use Vite's dev server
-    await setupVite(app);
-  } else {
-    // In production, serve the static files from the dist directory
-    serveStatic(app);
-  }
+  if (process.env.NODE_ENV === "development") {
+    const vite = await createServer({
+      server: {
+        port: 5000,
+        host: "0.0.0.0",
+      },
+      appType: "spa",
+    });
 
-  // Serve the app on port 5000
-  const PORT = 5000;
-  app.listen(PORT, "0.0.0.0", () => {
-    log(`serving on port ${PORT}`);
-  });
+    await vite.listen();
+    log(`Development server running on port 5000`);
+  } else {
+    // In production, static files will be served directly by the hosting platform
+    log(`Production build ready for static file serving`);
+  }
 })();
