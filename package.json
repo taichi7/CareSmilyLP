@@ -1,14 +1,13 @@
 {
-  "name": "rest-express",
-  "version": "1.0.0",
+  "name": "caresmilyhp",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "license": "MIT",
   "scripts": {
-    "dev": "tsx server/index.ts",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=build",
-    "start": "NODE_ENV=production node build/index.js",
-    "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
