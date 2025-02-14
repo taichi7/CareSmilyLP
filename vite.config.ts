@@ -20,5 +20,5 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "build/public"),
     emptyOutDir: true,
   },
-  base: './'
+  base: '/'
 });
